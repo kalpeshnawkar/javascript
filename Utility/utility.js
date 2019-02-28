@@ -1,4 +1,4 @@
-   
+   var c = require('util');
    var read=require('readline-sync');
     module.exports={
     input() {
@@ -474,70 +474,7 @@ algoanagram(s1,s2)
 
     },
     
-    algoprogram3()     //algoprogram3
-{
-  //  prime(n);
-    //palindrome(n)
-    //anagram(n)
-
-   prime(n)     
-	{ 
-        console.log("hii")
-		var flag1=true
-		var c=0;
-		
-			for(var i=1;i<=n;i++)
-			{
-				if(n%i==0)
-				{
-					c++;
-				}
-			}
-
-				if(c==2)
-				//if(i==2)
-					flag1= true;
-				
-				else
-					flag1=false;
-		}
-	 palindrome(n) 
-    {
-        var flag2=true;
-		var rev=0;
-		var tem=n;
-		while(tem!=0)
-		{
-			rev=rev*10+(tem%10);
-			tem=tem/10;
-		}
-		if(rev==n)
-		{
-			flag2=true;
-		}
-
-		flag2=false;
-
-    }
-    
-	 anagram(n)
-	{
-        
-		var flag3=false;
-		
-    }
-    if(flag1 == true && flag2==true &&flag3)
-    {
-        console.log("it is palindrome and prime and anagram")
-    }
-    else
-    {
-        console.log("it is not palindrome and prime and anagram");
-        
-    }
-
-
-},  
+ 
 
 
 /***********************************algorithm program 5********************************** */
@@ -565,38 +502,8 @@ findNumber(low,high,readline){
     return mid;
 },
 
-                                /**  file call function **/   
-
-fileCall(path) 
-{
-    var fileStream = require('fs');
-    var f = fileStream.readFileSync(path, 'utf8');
-    var arr = f.split(' ');
-    return arr;
-},
-
-writeFile(filename,Data)
-{
-    const fs = require('fs')
-    fs.writeFile(filename,Data,function(err)
-    {
-        if(err)
-        {
-            return console.log(err);
-        }
-
-    });
-}, 
-                
-
-
-
-
-
-
-
-
 /************************************algorithm program 7******************************/
+
 insertionsort(arr,num)
 {
     var a;
@@ -776,8 +683,26 @@ newton(c){
     else{
         console.log("Invalid or negative number");
     }
+},
+/************************************algorithm program 15****************************************/
+
+tobinary(n)
+{
+var arr=[]
+var i=0;
+while(n>0)
+{
+    arr[i]=n%2;
+    n=Math.floor(n/2);
+    i++
+}
+for(var j=arr.length-1;j>=0;j--)
+{
+    c.print(arr[j]);
 }
 
+
+},
 
     
 
