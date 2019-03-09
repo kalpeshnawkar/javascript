@@ -3,7 +3,7 @@ var read=require('readline-sync')
 function sum1()
 {
     var arr=[];
-   var num=read.questionInt("Enter the sixe of array")
+   var num=read.questionInt("Enter the size of array ")
     arr=utility.createArray(num)
     utility.threesum1(arr);
 }

@@ -14,3 +14,10 @@ function primepalana()
     })
 }
 primepalana();
+var pali=require('../Utility/utility')
+const readline=require('readline-sync')
+function palindrome(){
+    console.log("program start..");
+    pali.isAnagramPalimdrome();
+}
+palindrome();
