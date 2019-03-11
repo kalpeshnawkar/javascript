@@ -1,0 +1,21 @@
+{
+    "CompanyList": [
+        {
+            "CompanyName": "Google",
+            "Symbol":"G",
+            "Share": 600,
+            "price": 25000,
+            "Balance": 1230000
+        },
+        {
+            "CompanyName": "FaceBook",
+            "Symbol":"F",
+            "Share": 700,
+            "price": 30000,
+            "Balance": 1530000
+        }
+
+
+
+    ]
+}
