@@ -1,0 +1,36 @@
+{
+    "Customer": [
+        {
+            "ID": 123456,
+            "Name": "Akash",
+            "Share":5,
+            "Amount": 2500000,
+            "Comapny": "",
+            "Last_Transaction":""
+        },
+        {
+            "ID": 123446,
+            "Name": "Vijay",
+            "Share":7,
+            "Amount": 3000000,
+            "Comapny": "",
+            "Last_Transaction":""
+        },
+        {
+            "ID": 123346,
+            "Name": "Rahul",
+            "Share":10,
+            "Amount": 2700000,
+            "Comapny": "",
+            "Last_Transaction":""
+        },
+        {
+            "ID": 123347,
+            "Name": "Ganesh",
+            "Share":8,
+            "Amount": 2800000,
+            "Comapny": "",
+            "Last_Transaction":""
+        }
+    ]
+}

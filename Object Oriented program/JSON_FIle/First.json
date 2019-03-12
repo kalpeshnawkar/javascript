@@ -1,1 +1,55 @@
-{"Rice":[{"Rname":"Basmati","Weight":"25","price":"90"},{"Rname":"Jasmine","Weight":"30","price":"65"},{"Rname":"Arborio","Weight":"20","price":"40"},{"Rname":"a","Weight":"12","Price":"76"},{"Rname":"abc","Weight":"12","Price":"34"},{"Rname":"abcd","Weight":"34","Price":"65"},{"Rname":"shoes","Weight":"12","price":"32"}],"Pulses":[{"Pname":"Green Gram","Weight":"40","price":"80"},{"Pname":"Lentil","Weight":"30","price":"90"},{"Pname":"Sago","Weight":"40","price":"70"}],"Wheat":[{"Wname":"Amaranth","Weight":"20","price":"35"},{"Wname":"Bulgur","Weight":"30","price":"25"},{"Wname":"Corn","Weight":"25","price":"60"}]}
+{
+    "Rice":[
+        {
+            "Rname": "Basmati",
+            "Weight": "25",
+            "price": "90"
+        },
+        {
+            "Rname": "Jasmine",
+            "Weight": "30",
+            "price": "65"
+        },
+        {
+            "Rname": "Arborio",
+            "Weight": "20",
+            "price": "40"
+        }
+    ],
+    "Pulses":[
+        {
+            "Pname": "Green Gram",
+            "Weight": "40",
+            "price": "80"
+        },
+        {
+            "Pname": "Lentil",
+            "Weight": "30",
+            "price": "90"
+        },
+        {
+            "Pname": "Sago",
+            "Weight": "40",
+            "price": "70"
+        }
+    ],
+    "Wheat":[
+        {
+            "Wname": "Amaranth",
+            "Weight": "20",
+            "price": "35"
+
+        },
+        {
+            "Wname": "Bulgur",
+            "Weight": "30",
+            "price": "25"
+        },
+        {
+            "Wname": "Corn",
+            "Weight": "25",
+            "price": "60"
+        }
+
+    ]
+}

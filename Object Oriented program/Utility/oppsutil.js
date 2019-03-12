@@ -1,5 +1,5 @@
 module.exports = {
-inventory(data) {
+    inventory(data) {
         try {
             var rice = data.Rice
             var pulses = data.Pulses
@@ -49,56 +49,89 @@ inventory(data) {
 
     },
 
-/**
- * program to replace a string by regex
- */
-/**
- * 
- * @param {string} name 
- * @param {string} fullname 
- * @param {number} contack 
- * @param {Date} date 
- */
-regexReplace(name, fullname, contack, date) {
-    var readfile = require('fs')
-    var read = require("readline-sync")
-    var patt = /[a-zA-Z]/
     /**
-     * create a while to check give name and fullname are correct or not
+     * program to replace a string by regex
      */
-    while (!patt.test(name) || !patt.test(fullname)) {
+    /**
+     * 
+     * @param {string} name 
+     * @param {string} fullname 
+     * @param {number} contack 
+     * @param {Date} date 
+     */
+    regexReplace(name, fullname, contack, date) {
+        var readfile = require('fs')
+        var read = require("readline-sync")
+        var patt = /[a-zA-Z]/
+        /**
+         * create a while to check give name and fullname are correct or not
+         */
+        while (!patt.test(name) || !patt.test(fullname)) {
+            console.log()
+            console.log("Something Wrong")
+            console.log()
+            name = read.question("Enter the you Name[In Alphabets] : ")
+            fullname = read.question("Enter the you Full Name[In Alphabets] : ")
+        } //End of while loop
+        /**
+         * create a while to check give contack number are 10-digit or not
+         */
+        while (isNaN(contack) || contack.length != 10) {
+
+            contack = read.question("Enter your contack number [upto 10 digit] : ")
+        }//End of While loop
         console.log()
-        console.log("Something Wrong")
-        console.log()
-        name = read.question("Enter the you Name[In Alphabets] : ")
-        fullname = read.question("Enter the you Full Name[In Alphabets] : ")
-    } //End of while loop
+        /**
+         * read a file  to replace a some string with given user values
+         */
+        var message = readfile.readFilesync('../regex/regexfile.txt')
+        var replacemessage = message.replace(/<<name>>/i, name).replace(/<<full name>>/i, fullname).replace(/xxxxxxxxxx/i, contack).replace(/01|01|2016/i, date);
+        console.log(replacemessage)
+    },
     /**
-     * create a while to check give contack number are 10-digit or not
+     * program to buy a share of company
      */
-    while (isNaN(contack) || contack.length != 10) {
-
-        contack = read.question("Enter your contack number [upto 10 digit] : ")
-    }//End of While loop
-    console.log()
     /**
-     * read a file  to replace a some string with given user values
+     *  @param {number} option
+     *  @param {string} companydata
      */
-    var message = readfile.readFilesync('../regex/regexfile.txt')
-    var replacemessage = message.replace(/<<name>>/i, name).replace(/<<full name>>/i, fullname).replace(/xxxxxxxxxx/i, contack).replace(/01|01|2016/i, date);
-    console.log(replacemessage)
-},
-stock(option, companydata)
 
-{
-    var access=require("../comercial data processing/StockAccount.js")
-    var object=new access.StrockAccount;
-    switch(option,data)
-    {
-       case 1:
-       access.print(companydata,option)
-       
+    stock(companydata, customerdata) {
+        var read = require('readline-sync')
+        var access = require('../comercial data processing/StockAccount')
+        var object = new access.StockAccount(companydata, customerdata);
+        while (option != 5) {
+            console.log("Press 1 for Create New Account")
+            console.log("Pree 2 for Buy a Share")
+            console.log("Press 3 for sell a Share")
+            console.log("Press 4 For Print")
+            console.log("Press 5 for Exit")
+            console.log()
+            var option = read.questionInt("Enter the number : ")
+            console.log()
+            switch (option) {
+                case 1:
+                    object.createAccount()
+                    break;
+                case 2:
+                    object.buy()
+                    break;
+                case 3:
+                    object.sell()
+                    break;
+                case 4:
+                    object.print()
+                    break;
+                case 5:
+                    break;
+                default:
+                    console.log("Please, Enter Valid Key")
+                    console.log()
+                    break;
+                  
 
+
+            }
+        }
     }
-}
 }

@@ -7,3 +7,4 @@ console.log("============================ Inventory Data Management of Rice, Pul
 console.log()
 utility.inventory(inobject)
 
+
